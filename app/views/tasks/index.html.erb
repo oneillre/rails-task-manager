@@ -2,7 +2,11 @@
 <% @tasks.each do |task| %>
   <%if task.completed == true %>
     <h2>&#10004; <%= link_to task.title, task_path(task) %>
+    <%= link_to '&#128465;'.html_safe, task_path(task), method: :delete %></h2>
   <% else %>
     <h2>&#10005; <%= link_to task.title, task_path(task) %>
+    <%= link_to '&#128465;'.html_safe, task_path(task), method: :delete %></h2>
   <% end %>
 <% end %>
+<p><%= link_to 'Add a task',  tasks_new_path%></p>
+
