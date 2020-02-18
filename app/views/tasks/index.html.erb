@@ -1,8 +1,8 @@
 <h1>Your task list</h1>
 <% @tasks.each do |task| %>
   <%if task.completed == true %>
-    <h2>&#10004; <%= task.title %>
+    <h2>&#10004; <%= link_to task.title, task_path(task) %>
   <% else %>
-    <h2>&#10005; <%= task.title %>
+    <h2>&#10005; <%= link_to task.title, task_path(task) %>
   <% end %>
 <% end %>
